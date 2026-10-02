@@ -1,34 +1,54 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class ButtonPause : MonoBehaviour
 {
-
-		public GameObject Menu;
+	public static ButtonPause Instance;
+	public GameObject MenuOptions;
 	public GameObject SettingButton;
-		public bool IsActive = false;
-
-		private void Update()
+	private void Awake()
+    {
+		MenuOptions.SetActive(false);
+		if (Instance == null)
 		{
-		
-			if (Input.GetKeyDown(KeyCode.Escape))
-			{
-				Pause();
-			}
+			Instance = this;
+			DontDestroyOnLoad(gameObject);
 		}
-
-		public void Pause()
+		else
 		{
+			Destroy(gameObject);
+		}
+	
+	}
+    private void Start()
+    {
+    }
+    private void Update()
+	{
+		
+		if (Input.GetKeyDown(KeyCode.Escape))
+		{
+			Pause();
+		}
+	}
 
+	public void Pause()
+	{
 		Time.timeScale = 0.0f;
 		SettingButton.SetActive(false);
-		Menu.SetActive(true);
-		}
+		MenuOptions.SetActive(true);
+	}
 
-		public void Resume()
-		{
-	
+	public void Resume()
+	{
 		Time.timeScale = 1.0f;
 		SettingButton.SetActive(true);
-		Menu.SetActive(false);
+		MenuOptions.SetActive(false);
 	}
+	public void Restart()
+	{
+		Time.timeScale = 1.0f;
+		SceneManager.LoadScene(GameManager.Instance.Scene[GameManager.Instance.CountScene]);
 	}
+}
