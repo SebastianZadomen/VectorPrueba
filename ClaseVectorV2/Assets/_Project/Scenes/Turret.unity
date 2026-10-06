@@ -129,7 +129,6 @@ GameObject:
   m_Component:
   - component: {fileID: 257758765}
   - component: {fileID: 257758764}
-  - component: {fileID: 257758767}
   - component: {fileID: 257758766}
   m_Layer: 0
   m_Name: SpawnEnemy
@@ -181,20 +180,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Spawner
   pool: {fileID: 257758764}
   spawnInterval: 1.04
---- !u!114 &257758767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 257758763}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f11dd95c563f9f41a9fffaf24991c50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TimedObject
-  pool: {fileID: 257758764}
-  lifeTime: 8.5
 --- !u!1001 &290690992
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2886,6 +2871,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7565519446722106011, guid: 85f7bb7e748418148b8a1cd1c68c84d6, type: 3}
+      propertyPath: pool
+      value: 
+      objectReference: {fileID: 257758764}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

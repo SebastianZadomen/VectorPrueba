@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5339202090773326674}
   - component: {fileID: 4776180789128535351}
   - component: {fileID: 6402710630423106711}
+  - component: {fileID: 7565519446722106011}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -108,3 +109,17 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cea53ead121b0af4db447eeae9750f55, type: 2}
   - {fileID: 11400000, guid: 8cc687dba39f0f14c9b5f166eaa6f5f7, type: 2}
   - {fileID: 11400000, guid: 07c4df9e9792beb48b5e2a1fe1593075, type: 2}
+--- !u!114 &7565519446722106011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2846345198563633875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f11dd95c563f9f41a9fffaf24991c50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TimedObject
+  pool: {fileID: 0}
+  lifeTime: 3
